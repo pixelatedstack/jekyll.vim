@@ -8,20 +8,18 @@ This script is intended to automate the process of creating and editing [Jekyll]
 Introduction
 ============
 
-Install in ~/.vim, you can use the rake task to do this quickly:
+Install using VimPlug
 
-    rake install
+`Plug 'pixelatedstack/jekyll.vim'`
 
 Set the path to your Jekyll Blog in your vimrc:
 
     let g:jekyll_path = "/path/to/jekyll/blog"
 
-The default post suffix is "markdown" and the post status is published. You
-can override these if you like.
+The default post suffix is "markdown". 
 
 Example:
     let g:jekyll_post_suffix = "textile"
-    let g:jekyll_post_published = "false"
 
 You may also want to ad a few mappings to stream line the behavior:
 
@@ -46,18 +44,6 @@ List Jekyll posts:
 Create a new Jekyll Post:
 
     :JekyllPost
-
-If you are using git to store your blog, consider installing Tim Pope's [vim-fugitive](http://github.com/tpope/vim-fugitive) plugin. It allows you to use the following commands to speed things up.
-
-Add and commit the current post:
-
-    :Gwrite
-    :Gcommit
-
-Push the changes to the remote origin:
-
-    :Git push
-
 
 LICENSE
 =======

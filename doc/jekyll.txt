@@ -22,7 +22,6 @@ during create.
 
 Example:
     let g:jekyll_post_suffix = "textile"
-    let g:jekyll_post_published = "false"
     let g:jekyll_post_created = "epoch"
     let g:jekyll_post_created = "%D %T"
     let g:jekyll_prompt_tags = "true"
@@ -46,18 +45,6 @@ COMMANDS                                        *jekyll-commands*
 
                                                 *jekyll-:JekyllPost*
 :JekyllPost             Create a new Jekyll Post
-
-If you are using git to store your blog, consider installing Tim Pope's
-vim-fugitive plugin:
-
-http://github.com/tpope/vim-fugitive
-
-It allows you to use the following commands to speed things up.
-
-:Gwrite                 Add the current post to the index
-:Gcommit                Commit the changes to the repository
-
-:Git push               Push the changes to the remote origin
 
 ==============================================================================
 ABOUT                                           *jekyll-about*

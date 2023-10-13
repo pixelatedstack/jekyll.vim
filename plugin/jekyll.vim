@@ -23,10 +23,6 @@ if !exists('g:jekyll_post_suffix')
   let g:jekyll_post_suffix = "markdown"
 endif
 
-if !exists('g:jekyll_post_published')
-  let g:jekyll_post_published = "true"
-endif
-
 if !exists('g:jekyll_post_created')
   let g:jekyll_post_created = ""
 endif
@@ -111,7 +107,6 @@ endfunction
 command! -nargs=0 JekyllList :call JekyllList()
 
 function JekyllPost(title)
-  let published = g:jekyll_post_published
   let created = g:jekyll_post_created
   let tags = g:jekyll_prompt_tags
   let categories = g:jekyll_prompt_categories
@@ -136,7 +131,7 @@ function JekyllPost(title)
     echo "Making that post " . file_name
     exe "e " . g:jekyll_path . "/_posts/" . file_name
 
-    let template = ["---", "layout: post", "title: \"" . title . "\"", "published: " . published]
+    let template = ["---", "layout: post", "title: \"" . title . "\""]
     if created != ""
       call add(template, "created:  "  . created)
     endif
